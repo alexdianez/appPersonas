@@ -5,10 +5,25 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+ 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let user of users | async" size-xs="12" size-sm="6" size-md="4" size-lg="2" size-xl="1" >
+          <ion-card>
+          <ion-item>
+            <ion-avatar item-start>
+              <img [src]="user.picture.medium">
+            </ion-avatar>
+            <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+          </ion-item>
+          <ion-card-content>
+            Bacon ipsum dolor amet salami prosciutto ham hock, strip steak buffalo ribeye pork chop. Beef ribs tenderloin tail shoulder.
+            Spare ribs ham shoulder brisket rump hamburger. Pork belly kevin shoulder prosciutto ribeye pork chop chicken
+            strip steak pig.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>      
