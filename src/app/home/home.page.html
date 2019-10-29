@@ -1,29 +1,37 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar id="cabecera">
     <ion-title>
-      Ionic Blank
+      <h3 id="vistaVert"><ion-icon ios="ios-phone-portrait" md="md-phone-portrait"></ion-icon></h3>
+      <h3 id="vistaHor"><ion-icon ios="ios-phone-landscape" md="md-phone-landscape"></ion-icon></h3>
+      <h1  id="titulo"><b><u>Base de datos de la empresa</u></b></h1>
+      <h1 id="pagPrinc"><b> <ion-icon name="home"></ion-icon>{{ejemplo}}</b></h1>
+      <ion-input [(ngModel)]="gen" placeholder="Buscar..."><h3 id="barra"><b>·Introduzca el dato a buscar:</b></h3><ion-icon name="search"></ion-icon>
+      </ion-input>
     </ion-title>
+    
   </ion-toolbar>
+  
+
 </ion-header>
- 
+
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let user of users | async" size-xs="12" size-sm="6" size-md="4" size-lg="2" size-xl="1" >
-          <ion-card>
-          <ion-item>
-            <ion-avatar item-start>
-              <img [src]="user.picture.medium">
-            </ion-avatar>
-            <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+      <ion-col *ngFor="let persona of users | async" size-xs="12" size-sm="6" size-md="4" size-lg="5" size-xl="5" >
+          <ion-card *ngIf="persona.gender==gen || persona.age==gen || persona.name==gen || persona.balance==gen ">
+          <ion-item> 
+              <h2><b><ion-icon name="person"></ion-icon>Usuario:</b> {{persona.name}}</h2>
           </ion-item>
           <ion-card-content>
-            Bacon ipsum dolor amet salami prosciutto ham hock, strip steak buffalo ribeye pork chop. Beef ribs tenderloin tail shoulder.
-            Spare ribs ham shoulder brisket rump hamburger. Pork belly kevin shoulder prosciutto ribeye pork chop chicken
-            strip steak pig.
+            <h2><b><ion-icon name="logo-bitcoin"></ion-icon>Dinero:</b> {{persona.balance}}</h2>
+            <h2><b><ion-icon ios="ios-transgender" md="md-transgender"></ion-icon>Género:</b> {{persona.gender}}</h2>
+            <h2><b><ion-icon ios="ios-body" md="md-body"></ion-icon>Edad:</b> {{persona.age}}</h2> 
+            <h2><b><ion-icon ios="ios-pin" md="md-pin"></ion-icon>Dirección:</b> {{persona.address}}</h2>
+            <h2><b><ion-icon ios="ios-at" md="md-at"></ion-icon>Email:</b> {{persona.email}}</h2> 
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
-</ion-content>      
+</ion-content>
+   

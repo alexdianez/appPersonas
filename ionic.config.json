@@ -1,5 +1,7 @@
 {
   "name": "columnas",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

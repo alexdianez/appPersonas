@@ -1,0 +1,93 @@
+@media (max-width: 720px) {
+  ion-item {
+    --ion-background-color: #123749;
+    text-align: center;
+    color: #fff;
+  }
+  ion-content {
+    --ion-background-color: #00b7ff;
+  }
+  ion-card-content {
+    background-color: #004b69;
+    color: #fff;
+  }
+  #barra {
+    font-size: 15px;
+  }
+  ion-title {
+    --ion-background-color: #fff;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    --ion-font-size: 20px;
+    color: #000;
+    text-align: center;
+  }
+}
+@media (min-width: 720px) and (max-width: 1080px) {
+  ion-content {
+    --ion-background-color: rgb orange;
+  }
+  ion-card-content {
+    color: #000;
+  }
+  ion-title {
+    background-color: #042b29;
+    font-family: "Courier New", Courier, monospace;
+    --ion-font-size: 20px;
+    color: #fff;
+    text-align: center;
+  }
+}
+@media (min-width: 1080px) {
+  ion-item {
+    --ion-background-color: #123749;
+    text-align: center;
+    color: #fff;
+  }
+  ion-content {
+    --ion-background-color: #1d8bbe;
+  }
+  ion-card-content {
+    font-family: Verdana;
+    background-color: #fff;
+  }
+  ion-title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    size: 90px;
+    color: #000;
+    text-align: center;
+  }
+}
+@media (orientation: landscape) {
+  #titulo {
+    font-size: 35px;
+  }
+  #vistaHor {
+    visibility: visible;
+  }
+  #vistaVert {
+    visibility: hidden;
+  }
+  #barra {
+    size: 15px;
+    visibility: visible;
+  }
+}
+@media (orientation: portrait) {
+  #titulo {
+    font-size: 25px;
+  }
+  #vistaHor {
+    visibility: hidden;
+  }
+  #vistaVert {
+    visibility: visible;
+  }
+}
+h2 {
+  font-style: italic;
+}
+h3 {
+  font-style: oblique;
+}

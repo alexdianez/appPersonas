@@ -8,11 +8,13 @@ import { map }  from  'rxjs/operators';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
- 
+  ejemplo: string = 'Página principal';
+  gen: string = '';
   users: any;
   
   constructor(private httpClient: HttpClient) {
-    this.users = this.httpClient.get('https://randomuser.me/api/?results=20').pipe(map(res => res['results']));
+
+    this.users = this.httpClient.get('https://raw.githubusercontent.com/alexdianez/json/master/generador.json').pipe(map(res => res['results']));
   }
  
 }
