@@ -1,25 +1,26 @@
 <ion-header>
-  <ion-toolbar id="cabecera">
-    <ion-title>
-      <h3 id="vistaVert"><ion-icon ios="ios-phone-portrait" md="md-phone-portrait"></ion-icon></h3>
-      <h3 id="vistaHor"><ion-icon ios="ios-phone-landscape" md="md-phone-landscape"></ion-icon></h3>
-      <h1  id="titulo"><b><u>Base de datos de la empresa</u></b></h1>
-      <h1 id="pagPrinc"><b> <ion-icon name="home"></ion-icon>{{ejemplo}}</b></h1>
-      <ion-input [(ngModel)]="gen" placeholder="Buscar..."><h3 id="barra"><b>·Introduzca el dato a buscar:</b></h3><ion-icon name="search"></ion-icon>
-      </ion-input>
+  <ion-toolbar>
+    <ion-title id="titulo">
+      
+      <h1 id="main" ><b><u>BBDD de la empresa</u></b></h1>
+      
     </ion-title>
     
   </ion-toolbar>
   
-
+ 
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <h1 id="pagPrinc"><b> <ion-icon name="home"></ion-icon>{{ejemplo}}</b></h1><br>
+    <ion-input [(ngModel)]="gen" placeholder="Buscar..."></ion-input><ion-icon name="search"></ion-icon>
+  </ion-item>
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let persona of users | async" size-xs="12" size-sm="6" size-md="4" size-lg="5" size-xl="5" >
           <ion-card *ngIf="persona.gender==gen || persona.age==gen || persona.name==gen || persona.balance==gen ">
-          <ion-item> 
+          <ion-item id="Persona"> 
               <h2><b><ion-icon name="person"></ion-icon>Usuario:</b> {{persona.name}}</h2>
           </ion-item>
           <ion-card-content>
@@ -33,5 +34,9 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  <ion-item id="footer" style="position: absolute; display: block; margin-top: 650px">
+      <h3 id="vistaVert"><ion-icon ios="ios-phone-portrait" md="md-phone-portrait"></ion-icon></h3>
+      <h3 id="vistaHor"><ion-icon ios="ios-phone-landscape" md="md-phone-landscape"></ion-icon></h3>
+    </ion-item>
 </ion-content>
    

@@ -1,11 +1,11 @@
 @media (max-width: 720px) {
   ion-item {
-    --ion-background-color: #123749;
+    --ion-background-color: #838383;
     text-align: center;
     color: #fff;
   }
   ion-content {
-    --ion-background-color: #00b7ff;
+    --ion-background-color: #8ae4c6;
   }
   ion-card-content {
     background-color: #004b69;
@@ -14,18 +14,25 @@
   #barra {
     font-size: 15px;
   }
+  #titulo {
+    --ion-font-size: 25px;
+    background-color: #8ae4c6;
+  }
   ion-title {
     --ion-background-color: #fff;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+    font-family: "Bahnschrift";
     --ion-font-size: 20px;
     color: #000;
     text-align: center;
   }
 }
 @media (min-width: 720px) and (max-width: 1080px) {
-  ion-content {
-    --ion-background-color: rgb orange;
+  #footer {
+    --ion-background-color: #b6b6b6;
+  }
+  #Persona {
+    color: white;
+    --ion-background-color: #042b29;
   }
   ion-card-content {
     color: #000;
@@ -39,6 +46,9 @@
   }
 }
 @media (min-width: 1080px) {
+  ion-header {
+    --ion-background-color: #bde;
+  }
   ion-item {
     --ion-background-color: #123749;
     text-align: center;
@@ -52,16 +62,15 @@
     background-color: #fff;
   }
   ion-title {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+    font-family: "Bahnschrift";
     size: 90px;
     color: #000;
     text-align: center;
   }
 }
 @media (orientation: landscape) {
-  #titulo {
-    font-size: 35px;
+  #main {
+    font-size: 25px;
   }
   #vistaHor {
     visibility: visible;
